@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sora, Manrope } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "./site";
 
 const display = Sora({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const body = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jlapps.example.com"), // TODO: dominio real al publicar
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "JLAPPS — Diseño y desarrollo de aplicaciones móviles a la medida",
     template: "%s | JLAPPS",
@@ -44,14 +45,21 @@ export const metadata: Metadata = {
     title: "JLAPPS — Tu negocio, en la pantalla de tus clientes",
     description:
       "Apps móviles, páginas web y agentes de WhatsApp que atienden y venden por ti. Cotiza sin compromiso.",
-    images: [{ url: "/og-image.jpg", width: 512, height: 512, alt: "JLAPPS" }],
+    images: [
+      {
+        url: "/og-banner.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JLAPPS — Apps móviles, páginas web y agentes de WhatsApp",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "JLAPPS — Apps móviles a la medida",
     description:
       "Delivery, tiendas, citas, pagos: tu negocio en una app. Cotiza por WhatsApp.",
-    images: ["/og-image.jpg"],
+    images: ["/og-banner.jpg"],
   },
   robots: { index: true, follow: true },
   icons: {

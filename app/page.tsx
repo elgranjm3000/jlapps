@@ -1,5 +1,6 @@
 import { Header } from "./components/Header";
 import { Phone } from "./components/Phone";
+import { SITE_URL } from "./site";
 import { WaIcon, waLink } from "./components/Wa";
 import {
   Delivery,
@@ -109,9 +110,9 @@ export default function Home() {
     name: "JLAPPS",
     description:
       "Diseño y desarrollo de apps móviles, páginas web y agentes de WhatsApp con IA para negocios: delivery, tiendas online, citas, reservas y pagos.",
-    image: "https://jlapps.example.com/jlapps-logo.jpg",
+    image: `${SITE_URL}/jlapps-logo.jpg`,
     telephone: "+584242399671",
-    url: "https://jlapps.example.com",
+    url: SITE_URL,
     areaServed: "Latinoamérica",
     availableLanguage: "Spanish",
     contactPoint: {
