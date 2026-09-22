@@ -262,7 +262,6 @@ img {
 }
 
 .nav {
-  display: flex;
   gap: 28px;
   font-size: 14.5px;
   color: var(--text-2);
