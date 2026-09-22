@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Header } from "./components/Header";
 import { Phone } from "./components/Phone";
 import { WaIcon, waLink } from "./components/Wa";
 import {
@@ -129,26 +129,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="header">
-        <div className="container header-in">
-          <a className="brand" href="#" aria-label="JLAPPS inicio">
-            <Image src="/jlapps-logo.jpg" alt="Logo JLAPPS" width={42} height={42} />
-            <b>
-              JL<span>APPS</span>
-            </b>
-          </a>
-          <nav className="nav" aria-label="Secciones">
-            <a href="#servicios">Servicios</a>
-            <a href="#apps">Apps</a>
-            <a href="#webs">Webs</a>
-            <a href="#agentes">Agentes</a>
-            <a href="#proceso">Cómo trabajamos</a>
-          </nav>
-          <a className="btn btn-wa" href={waLink(WA_MSG)} target="_blank" rel="noopener noreferrer">
-            <WaIcon /> Cotiza tu app
-          </a>
-        </div>
-      </header>
+      <Header waMsg={WA_MSG} />
 
       <main>
         {/* ---- hero ---- */}
