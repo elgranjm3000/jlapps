@@ -48,7 +48,7 @@ export function Header({ waMsg }: { waMsg: string }) {
 
         <div className="header-actions">
           <a className="btn btn-wa" href={waLink(waMsg)} target="_blank" rel="noopener noreferrer">
-            <WaIcon /> Cotiza tu app
+            <WaIcon /> <span>Cotiza tu app</span>
           </a>
 
           <button

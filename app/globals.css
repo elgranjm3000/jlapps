@@ -116,9 +116,22 @@ img {
   }
 }
 
+@media (max-width: 430px) {
+  /* solo logo + icono WhatsApp + hamburguesa */
+  .header-actions .btn {
+    padding: 12px;
+  }
+  .header-actions .btn span {
+    display: none;
+  }
+  .brand b {
+    display: none;
+  }
+}
+
 /* hamburguesa */
 .burger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -129,6 +142,24 @@ img {
   background: transparent;
   border: 1px solid var(--line-strong);
   cursor: pointer;
+}
+
+/* navegación de escritorio: oculta por defecto (mobile-first),
+   se activa solo en pantallas anchas */
+.nav {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .nav {
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+  .mobile-panel {
+    display: none;
+  }
 }
 
 .burger span {
